@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<input type="text" class="color" name="color">
+<input type="button" name="color_ok" value="ok" onclick="ColorBodyChange()">
+<br>
+<input type="text" class="color_text" name="color_text">
+<input type="button" name="color_text_ok" value="ok" onclick="ColorTextChange()">
+<div class="text_color">text_color</div>
+<br>
+<input type="text" class="link_in" name="link_in">
+<input type="button" name="link_in_ok" value="ok" onclick="LinkTextChange()">
+<div ><a class="link" href="#">link</a></div>
+<script type="text/javascript">
+	
+function ColorBodyChange() {
+	document.documentElement.style.background = document.querySelector(".color").value;
+}
+function ColorTextChange() {
+	document.querySelector(".text_color").style.color = document.querySelector(".color_text").value;
+}
+function LinkTextChange() {
+	document.querySelector(".link").href = document.querySelector(".link_in").value;
+}
+
+</script>
+</body>
+</html>
